@@ -1,10 +1,13 @@
-import Main from './components/Main';
+import './App.css'
+import Header from "./components/Header";
+import Section from "./components/Section";
 
 function App() {
   return (
-    <>
-      <Main />
-    </>
+    <div className="App">
+      <Header/>
+      <Section/>
+    </div>
   );
 }
 
