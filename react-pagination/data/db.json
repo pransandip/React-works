@@ -1,0 +1,118 @@
+{
+    "superheroes": [
+        {
+            "id": 1,
+            "name": "Batman",
+            "alterEgo": "Bruce Wayne"
+        },
+        {
+            "id": 2,
+            "name": "Superman",
+            "alterEgo": "Clark Kent"
+        },
+        {
+            "id": 3,
+            "name": "Wonder Woman",
+            "alterEgo": "Princess Diana"
+        },
+        {
+            "id": 4,
+            "name": "Moon knight",
+            "alterEgo": "Alex wand"
+        },
+        {
+            "id": 5,
+            "name": "Spiderman",
+            "alterEgo": "Petter parker"
+        },
+        {
+            "id": 6,
+            "name": "Groot",
+            "alterEgo": "Neo jack"
+        },
+        {
+            "id": 7,
+            "name": "Thor",
+            "alterEgo": "Dominiq kooper"
+        },
+        {
+            "id": 8,
+            "name": "Iron man",
+            "alterEgo": "Robert dr jr"
+        },
+        {
+            "id": 9,
+            "name": "Captain America",
+            "alterEgo": "Rio"
+        },
+        {
+            "id": 10,
+            "name": "Dr strange",
+            "alterEgo": "Bratt kent"
+        }
+    ],
+    "friends": [
+        {
+            "id": 1,
+            "name": "Chandler Bing"
+        },
+        {
+            "id": 2,
+            "name": "Joey Tribbiani"
+        },
+        {
+            "id": 3,
+            "name": "Rachel Green"
+        }
+    ],
+    "users": [
+        {
+            "id": "vishwas@example.com",
+            "channelId": "codevolution"
+        }
+    ],
+    "channels": [
+        {
+            "id": "codevolution",
+            "courses": [
+                "react",
+                "vue",
+                "angular"
+            ]
+        }
+    ],
+    "colors": [
+        {
+            "id": 1,
+            "label": "red"
+        },
+        {
+            "id": 2,
+            "label": "blue"
+        },
+        {
+            "id": 3,
+            "label": "green"
+        },
+        {
+            "id": 4,
+            "label": "yellow"
+        },
+        {
+            "id": 5,
+            "label": "black"
+        },
+        {
+            "id": 6,
+            "label": "white"
+        },
+        {
+            "id": 7,
+            "label": "orange"
+        },
+        {
+            "id": 8,
+            "label": "purple"
+        }
+    ]
+}
