@@ -1,0 +1,10 @@
+version: "3"
+services:
+  login-container:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        - REACT_APP_NAME=Sandy-prod
+    ports:
+      - "8080:80"

@@ -1,0 +1,6 @@
+version: "3"
+services:
+  login-container:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
