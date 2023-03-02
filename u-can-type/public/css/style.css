@@ -346,6 +346,25 @@ img {
   text-transform: uppercase;
   border-radius: 10px;
 }
+
+.type-test .type-test-content .typing-btn button {
+  padding: 16px 29px;
+  color: #fff;
+  background-color: #ea4c89;
+  font-size: 2.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: none;
+}
+
+.type-test .type-test-content .typing-btn button:hover {
+  background-color: #dd3173;
+}
+.type-test .type-test-content .typing-btn button:focus {
+  box-shadow: none;
+}
+
 .type-test .copyright {
   position: absolute;
   bottom: 2rem;

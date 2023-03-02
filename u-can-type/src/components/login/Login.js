@@ -1,9 +1,25 @@
-import { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Fragment, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import FormInput from "./form-input/FormInput";
 import logoImage from "./logo.png";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const loginHandler = (email, password) => {
+    // console.log({ email, password });
+    localStorage.setItem("login", true);
+    navigate("/start-typing");
+  };
+
+  //* If logged in navigate: start-typing
+  useEffect(() => {
+    const login = localStorage.getItem("login");
+    if (login) {
+      navigate("/start-typing");
+    }
+  }, [navigate]);
+
   return (
     <Fragment>
       <section className="login-bg">
@@ -15,7 +31,7 @@ const Login = () => {
             <div className="login-details">
               <h2>Check Your Online </h2>
               <h1>Typing Speed </h1>
-              <FormInput />
+              <FormInput onLogin={loginHandler} />
             </div>
             <p className="copyright">
               Copyright 2022. All Rights Reserved.{" "}

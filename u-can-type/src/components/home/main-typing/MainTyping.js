@@ -10,7 +10,7 @@ import Widget from "../../UI/widgets/Widget";
 import Word from "../../UI/word/Word";
 import logoImage from "./logo.png";
 
-// * Importing localised strings
+// * Importing localized strings
 import strings from "../../../Language/word_cloud.json";
 
 const MainTyping = () => {
@@ -79,7 +79,7 @@ const MainTyping = () => {
     }
   };
 
-  // timeout
+  // timeout: show popup
   useEffect(() => {
     if (openModal) {
       swal({
@@ -129,7 +129,7 @@ const MainTyping = () => {
           <div className="type-t-details">
             <div className="type-test-content">
               <div className="logo">
-                <img src={logoImage} alt="" />
+                <img src={logoImage} alt="" loading="lazy" />
               </div>
               <h1>Test Your Typing Speed</h1>
               <div className="typing-input">

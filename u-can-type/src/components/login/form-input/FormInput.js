@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Validation from "../../UI/validation/Validation";
 import Button from "../../UI/Button/Button";
 import Card from "../../UI/card/Card";
 
@@ -12,20 +13,26 @@ const FormInput = (props) => {
   const [password, setPassword] = useState("");
   const [emailIsValid, setEmailIsValid] = useState();
   const [passwordIsValid, setPasswordIsValid] = useState();
+
+  const [emailError, setEmailError] = useState(false);
+  const [passWError, setPassWError] = useState(false);
   const [formIsValid, setFormIsValid] = useState(false);
 
+  // form submit handler
   const submitHandler = (e) => {
     e.preventDefault();
+    props.onLogin(email, password);
   };
 
+  // * Input field validation
   useEffect(() => {
     const identifier = setTimeout(() => {
-      console.log("checking!");
-      setFormIsValid(email.includes("@") && password.trim().length > 6); // happening in onChange: btn show
+      // console.log("checking!");
+      setFormIsValid(email.includes("@") && password.trim().length > 6); // checking in onChange: to show btn
     }, 500);
 
     return () => {
-      console.log("CLEAN UP");
+      // console.log("CLEAN UP");
       clearTimeout(identifier);
     };
   }, [email, password]);
@@ -48,7 +55,9 @@ const FormInput = (props) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             onBlur={() => setEmailIsValid(email.includes("@"))}
+            onKeyUp={() => setEmailError(!email.includes("@"))}
           />
+          {emailError && <Validation>Enter a valid email address</Validation>}
         </div>
         <div
           className={`form-group ${
@@ -63,7 +72,13 @@ const FormInput = (props) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             onBlur={() => setPasswordIsValid(password.trim().length > 6)}
+            onKeyUp={() => setPassWError(password.trim().length <= 6)}
           />
+          {passWError && (
+            <Validation>
+              Password must be more than six character long
+            </Validation>
+          )}
         </div>
         <div className="form-group form-check">
           <input

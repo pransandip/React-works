@@ -14,5 +14,13 @@
     "package.json",
     "package-lock.json"
   ],
-  "words": ["Parens", "describedby", "Mahendra", "Dhoni", "Swal", "swal"]
+  "words": [
+    "Parens",
+    "describedby",
+    "Mahendra",
+    "Dhoni",
+    "Swal",
+    "swal",
+    "sweetalert"
+  ]
 }

@@ -19,7 +19,7 @@ const StartTyping = () => {
                   <h6>seconds</h6>
                 </div>
                 <div className="typing-input-box">
-                  <h5>0</h5>
+                  <h5>100</h5>
                   <h6>errors</h6>
                 </div>
                 <div className="typing-input-box">

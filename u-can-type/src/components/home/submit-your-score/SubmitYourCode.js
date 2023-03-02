@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logoImage from "./logo.png";
+import Button from "../../UI/Button/Button";
 
-const SubmitYourCode = () => {
+const SubmitYourCode = (props) => {
   // reading data from session object
   let tempObj = JSON.parse(localStorage.localDBInfo);
+
+  const { LOGOUT } = props;
 
   return (
     <React.Fragment>
@@ -12,7 +16,7 @@ const SubmitYourCode = () => {
           <div className="type-t-details">
             <div className="type-test-content">
               <div className="logo">
-                <img src={logoImage} alt="" />
+                <img src={logoImage} alt="" loading="lazy" />
               </div>
               <h1>Test Your Typing Speed</h1>
               <div className="typing-input">
@@ -38,11 +42,12 @@ const SubmitYourCode = () => {
                 </div>
               </div>
               <div className="typing-btn">
-                <a href=".">submit your score</a>
+                <Button onClick={LOGOUT}>submit your score</Button>
               </div>
               <p className="copyright">
                 Copyright 2022. All Rights Reserved.{" "}
-                <a href=".">Privacy policy</a> | <a href=".">Disclaimer</a>
+                <Link to={"/submit-your-score"}>Privacy policy</Link> |{" "}
+                <Link to={"/submit-your-score"}>Disclaimer</Link>
               </p>
             </div>
           </div>

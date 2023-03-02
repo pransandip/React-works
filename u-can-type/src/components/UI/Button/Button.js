@@ -2,7 +2,7 @@ const Button = (props) => {
   return (
     <button
       {...props}
-      className="btn btn-primary"
+      className={`btn btn-primary ${props.className}`}
       type={props.type || "button"}
     ></button>
   );
