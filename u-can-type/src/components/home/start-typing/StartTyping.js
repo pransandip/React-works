@@ -1,8 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Button from "../../UI/Button/Button";
 import logoImage from "./logo.png";
 
 const StartTyping = () => {
+  const navigate = useNavigate();
+
   return (
     <React.Fragment>
       <section className="type-test">
@@ -28,7 +31,9 @@ const StartTyping = () => {
                 </div>
               </div>
               <div className="typing-btn">
-                <Link to={"/main-typing"}>start typing</Link>
+                <Button onClick={() => navigate("/main-typing")}>
+                  start typing
+                </Button>
               </div>
               <p className="copyright">
                 Copyright 2022. All Rights Reserved.{" "}

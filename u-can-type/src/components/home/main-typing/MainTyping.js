@@ -3,9 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
 // components
-import Accuracy from "../../../Helpers/Accuracy";
-import Timer from "../../../Helpers/Timer";
-import Error from "../../../Helpers/Error";
+import Accuracy from "./calculations/Accuracy";
+import Timer from "./calculations/Timer";
+import Error from "./calculations/Error";
 import Widget from "../../UI/widgets/Widget";
 import Word from "../../UI/word/Word";
 import logoImage from "./logo.png";
@@ -79,7 +79,7 @@ const MainTyping = () => {
     }
   };
 
-  // timeout: show popup
+  // timeout: show modal
   useEffect(() => {
     if (openModal) {
       swal({

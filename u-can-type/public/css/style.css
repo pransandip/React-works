@@ -191,6 +191,10 @@ img {
   margin-bottom: 2.6rem;
   font-family: "Colfax";
 }
+.login-bg .login-details .login-form form .form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
 .login-bg .login-details .login-form form .form-group label {
   font-size: 1.6rem;
   font-weight: 500;

@@ -14,6 +14,7 @@ const FormInput = (props) => {
   const [emailIsValid, setEmailIsValid] = useState();
   const [passwordIsValid, setPasswordIsValid] = useState();
 
+  const [checked, setChecked] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [passWError, setPassWError] = useState(false);
   const [formIsValid, setFormIsValid] = useState(false);
@@ -21,7 +22,7 @@ const FormInput = (props) => {
   // form submit handler
   const submitHandler = (e) => {
     e.preventDefault();
-    props.onLogin(email, password);
+    props.onLogin({ email, password, rememberMeStatus: checked });
   };
 
   // * Input field validation
@@ -36,6 +37,18 @@ const FormInput = (props) => {
       clearTimeout(identifier);
     };
   }, [email, password]);
+
+  // Remember me handler
+  useEffect(() => {
+    const rememberMe = JSON.parse(localStorage.rememberMeData ?? "{}");
+    if (rememberMe?.rememberMeStatus) {
+      setEmail(rememberMe?.email);
+      setPassword(rememberMe?.password);
+      setChecked(rememberMe?.rememberMeStatus);
+    } else {
+      localStorage.removeItem("rememberMeData");
+    }
+  }, []);
 
   return (
     <Card>
@@ -53,7 +66,7 @@ const FormInput = (props) => {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value.trim())}
             onBlur={() => setEmailIsValid(email.includes("@"))}
             onKeyUp={() => setEmailError(!email.includes("@"))}
           />
@@ -70,7 +83,7 @@ const FormInput = (props) => {
             className="form-control"
             id="exampleInputPassword1"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value.trim())}
             onBlur={() => setPasswordIsValid(password.trim().length > 6)}
             onKeyUp={() => setPassWError(password.trim().length <= 6)}
           />
@@ -85,6 +98,8 @@ const FormInput = (props) => {
             type="checkbox"
             className="form-check-input"
             id="exampleCheck1"
+            checked={checked}
+            onChange={() => setChecked(!checked)}
           />
           <label className="form-check-label" htmlFor="exampleCheck1">
             Remember Me

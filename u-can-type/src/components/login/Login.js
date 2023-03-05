@@ -1,18 +1,22 @@
 import { Fragment, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { popup } from "../../Helpers/notification";
 import FormInput from "./form-input/FormInput";
 import logoImage from "./logo.png";
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const loginHandler = (email, password) => {
-    // console.log({ email, password });
+  const loginHandler = (loginObj) => {
+    popup("Login Successfully");
+    localStorage.setItem("rememberMeData", JSON.stringify({ ...loginObj }));
     localStorage.setItem("login", true);
-    navigate("/start-typing");
+    setTimeout(() => {
+      navigate("/start-typing");
+    }, 1000);
   };
 
-  //* If logged in navigate: start-typing
+  //* If loggedIn navigate: start-typing
   useEffect(() => {
     const login = localStorage.getItem("login");
     if (login) {

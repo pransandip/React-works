@@ -21,6 +21,8 @@
     "Dhoni",
     "Swal",
     "swal",
-    "sweetalert"
+    "sweetalert",
+    "ToastContainer",
+    "toastify"
   ]
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { popup } from "../Helpers/notification";
 
 const Protected = (props) => {
   const { Component } = props;
@@ -9,10 +10,14 @@ const Protected = (props) => {
 
   /*----- Handling logout -----*/
   const logOut = () => {
-    localStorage.setItem("login", "");
-    navigate("/");
+    popup("Logout Successfully");
+    localStorage.removeItem("login");
+    setTimeout(() => {
+      navigate("/");
+    }, 1000);
   };
 
+  /*----- check logIn -----*/
   useEffect(() => {
     const login = localStorage.getItem("login");
     setLOGIN(login);
