@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Protected from "./Auth/Protected";
 import Login from "./components/login/Login";
 import MainTyping from "./components/home/main-typing/MainTyping";
 import StartTyping from "./components/home/start-typing/StartTyping";
 import SubmitYourCode from "./components/home/submit-your-score/SubmitYourCode";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import SignUp from "./components/signup/SignUp";
 
 function App() {
   const localDBInfo = Object.create({});
@@ -25,6 +27,7 @@ function App() {
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route
           path="/start-typing"
           element={<Protected Component={StartTyping} />}

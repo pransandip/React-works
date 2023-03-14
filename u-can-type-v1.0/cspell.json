@@ -23,6 +23,7 @@
     "swal",
     "sweetalert",
     "ToastContainer",
-    "toastify"
+    "toastify",
+    "formik"
   ]
 }

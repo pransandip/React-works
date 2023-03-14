@@ -3,12 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
 // components
+import logoImage from "./logo.png";
+import Word from "../../UI/word/Word";
+import Widget from "../../UI/widgets/Widget";
 import Accuracy from "./calculations/Accuracy";
 import Timer from "./calculations/Timer";
 import Error from "./calculations/Error";
-import Widget from "../../UI/widgets/Widget";
-import Word from "../../UI/word/Word";
-import logoImage from "./logo.png";
 
 // * Importing localized strings
 import strings from "../../../Language/word_cloud.json";

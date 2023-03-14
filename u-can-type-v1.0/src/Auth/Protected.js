@@ -6,7 +6,7 @@ const Protected = (props) => {
   const { Component } = props;
   const navigate = useNavigate();
 
-  const [LOGIN, setLOGIN] = useState("");
+  const [LOGIN, setLOGIN] = useState(false);
 
   /*----- Handling logout -----*/
   const logOut = () => {

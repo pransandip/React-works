@@ -25,15 +25,15 @@ const FormInput = (props) => {
     props.onLogin({ email, password, rememberMeStatus: checked });
   };
 
-  // * Input field validation
+  // Input field validation
   useEffect(() => {
     const identifier = setTimeout(() => {
-      // console.log("checking!");
-      setFormIsValid(email.includes("@") && password.trim().length > 6); // checking in onChange: to show btn
+      // "checking!" it on onChange(): to show btn
+      setFormIsValid(email.includes("@") && password.trim().length > 6);
     }, 500);
 
     return () => {
-      // console.log("CLEAN UP");
+      // "CLEAN UP"
       clearTimeout(identifier);
     };
   }, [email, password]);
@@ -65,6 +65,7 @@ const FormInput = (props) => {
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            autoComplete="nope"
             value={email}
             onChange={(e) => setEmail(e.target.value.trim())}
             onBlur={() => setEmailIsValid(email.includes("@"))}
@@ -82,6 +83,7 @@ const FormInput = (props) => {
             type="password"
             className="form-control"
             id="exampleInputPassword1"
+            autoComplete="nope"
             value={password}
             onChange={(e) => setPassword(e.target.value.trim())}
             onBlur={() => setPasswordIsValid(password.trim().length > 6)}
@@ -110,7 +112,7 @@ const FormInput = (props) => {
           login
         </Button>
         <p className="new-ac">
-          Don't have an account? <Link to={"/"}>Sign Up Now?</Link>
+          Don't have an account? <Link to={"/signup"}>Sign Up Now?</Link>
         </p>
       </form>
     </Card>
