@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SubmitYourCode from "../submit-your-score/SubmitYourCode";
 
 // components
@@ -9,31 +9,33 @@ import Widget from "../../UI/widgets/Widget";
 import Accuracy from "./calculations/Accuracy";
 import Timer from "./calculations/Timer";
 import Error from "./calculations/Error";
+import storage from "../../../Helpers/storage";
 
 // * Importing Random strings
 import getRandomText from "../../../Helpers/get.random.text";
 
 const MainTyping = (props) => {
   // reading data from session object
-  let tempObj = JSON.parse(localStorage.localDBInfo);
+  let tempObj = storage.get("localDBInfo", {});
 
   // get random text
   const wordCloud = getRandomText();
 
   // reading from env file
-  const SECONDS = process.env.REACT_APP_SECONDS || 20;
+  const SECONDS = process.env.REACT_APP_SECONDS || 250;
 
   /*------ Defined State -------*/
   const [userInput, setUserInput] = useState("");
-  const [countCorrectSymbols, setCountCorrectSymbols] = useState(0);
   const [countWrongSymbols, setCountWrongSymbols] = useState(0);
+  const [countCorrectSymbols, setCountCorrectSymbols] = useState(0);
   const [countTotalEnteredSymbols, setCountTotalEnteredSymbols] = useState(0);
+
   const [timeElapsed, setTimeElapsed] = useState(SECONDS);
   const [startCounting, setStartCounting] = useState(false);
   const [openModal, setOpenModal] = useState(false);
-  const [finishedOnTime, setFinishedOnTime] = useState(false);
-  const [error, setError] = useState("");
+
   const [accuracy, setAccuracy] = useState("");
+  const [error, setError] = useState("");
   const [wpm, setWPM] = useState("");
   const [cpm, setCPM] = useState("");
 
@@ -72,7 +74,6 @@ const MainTyping = (props) => {
     if (value.length === cloud.current.length) {
       // overflow
       setStartCounting(false);
-      setFinishedOnTime(true);
       setOpenModal(true);
     }
   };
@@ -88,7 +89,7 @@ const MainTyping = (props) => {
       wpm: wpm,
       cpm: cpm,
     };
-    localStorage.setItem("localDBInfo", JSON.stringify(newObj));
+    storage.set("localDBInfo", newObj);
   }, [timeElapsed, tempObj, error, accuracy, wpm, cpm]);
 
   return (

@@ -1,0 +1,7 @@
+{
+    "workbench.colorCustomizations": {
+		"editorLineNumber.foreground": "#00ff00b7"
+	},
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+}

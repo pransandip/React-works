@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logoImage from "./logo.png";
 import Button from "../../UI/Button/Button";
+import storage from "../../../Helpers/storage";
 
 const SubmitYourCode = (props) => {
-  // reading data from session object
-  let tempObj = JSON.parse(localStorage.localDBInfo);
+  // to read data from localStorage object send empty object as default parameter
+  let tempObj = storage.get("localDBInfo", {});
 
   const { LOGOUT } = props;
-
   return (
     <React.Fragment>
       <section className="type-test">
