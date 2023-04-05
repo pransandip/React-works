@@ -15,7 +15,7 @@ import storage from "../../../Helpers/storage";
 import getRandomText from "../../../Helpers/get.random.text";
 
 const MainTyping = (props) => {
-  // reading data from session object
+  // reading data from local object
   let tempObj = storage.get("localDBInfo", {});
 
   // get random text
@@ -99,7 +99,7 @@ const MainTyping = (props) => {
     return () => window.removeEventListener("beforeunload", unloadCallback);
   }, []);
 
-  // setting session object
+  // setting local object
   useEffect(() => {
     let seconds = process.env.REACT_APP_SECONDS - timeElapsed;
     let newObj = {

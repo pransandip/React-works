@@ -1,0 +1,26 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": ["javascriptreact"],
+  "ignorePaths": [
+    "cspell.json",
+    ".github/workflows/**",
+    ".vscode/*.json",
+    "coverage/",
+    "dist/",
+    "build/",
+    "node_modules/",
+    "yarn.lock",
+    "package.json",
+    "package-lock.json"
+  ],
+  "words": [
+    "Parens",
+    "describedby",
+    "Mahendra",
+    "Dhoni",
+    "ToastContainer",
+    "toastify",
+    "formik"
+  ]
+}

@@ -1,0 +1,429 @@
+* {
+  box-sizing: border-box;
+  font-family: "Colfax";
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Colfax";
+}
+p,
+span,
+label,
+a {
+  font-size: 1.6rem;
+  color: var(--black);
+}
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+:focus {
+  box-shadow: none;
+  border: none;
+}
+input,
+select,
+textarea {
+  border-radius: 0;
+  color: #333333;
+}
+input[type="button"],
+input[type="submit"],
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input:focus {
+  box-shadow: none;
+}
+focus,
+target,
+selected,
+before,
+after {
+  border: none;
+  box-shadow: none;
+}
+select::-ms-expand {
+  display: none;
+}
+select[option="selected"] {
+  background: none;
+}
+:focus {
+  outline: 0;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #a3a3a3;
+  opacity: 1;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #a3a3a3;
+  opacity: 1;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #a3a3a3;
+  opacity: 1;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #a3a3a3;
+  opacity: 1;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  opacity: 0;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  opacity: 0;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.clear {
+  clear: both;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+.container {
+  position: relative;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a:hover {
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.form-control:focus {
+  border-color: #999966;
+  box-shadow: none;
+}
+.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--black);
+  opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--black);
+}
+
+.form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #000;
+}
+
+.login-bg .login-bg-content {
+  width: 100%;
+  margin: 0;
+  height: 100vh;
+}
+.login-bg .login-left {
+  background-image: url(../images/login-banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  padding: 50px 60px 20px 55px;
+}
+.login-bg .login-right {
+  background-image: url(../images/login-right-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  padding: 0;
+}
+.login-bg .login-right.sign-up {
+  background-image: url(../images/signup-right-img.jpg);
+}
+.login-bg .login-details h2 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin-bottom: 1.4rem;
+  margin-top: 3rem;
+  color: #fff;
+  font-family: "Colfax";
+}
+.login-bg .login-details h1 {
+  font-size: 4.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 2.2rem;
+  font-family: "Colfax";
+}
+.login-bg .login-details .login-form {
+  padding: 2.5rem;
+  background-color: #ffffff29;
+  border-radius: 10px;
+}
+.login-bg .login-details .login-form h3 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #03c1ff;
+  margin-bottom: 2.6rem;
+  font-family: "Colfax";
+}
+.login-bg .login-details .login-form form .form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.login-bg .login-details .login-form form .form-group label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+.login-bg .login-details .login-form form .form-group input:focus {
+  outline: none;
+  /* border-color: #4f005f; */
+  background: #f6dbfc;
+}
+.login-bg .login-details .login-form form .form-control {
+  font-size: 1.6rem;
+  min-height: 4rem;
+  border-radius: 10px;
+  margin-bottom: 1.4rem;
+}
+.login-bg .login-details .login-form form .form-group.form-check label {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+  padding-left: 5px;
+}
+.login-bg .login-details .login-form form .form-group.form-check a {
+  float: right;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+}
+.login-bg .login-details .login-form form button {
+  margin-top: 2rem;
+  width: 100%;
+  border: 1px solid #ea4c89;
+  border-radius: 10px;
+  padding: 6px 0;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #ea4c89;
+  border: none;
+  text-transform: uppercase;
+}
+
+.login-bg .login-details .login-form form button:hover {
+  background-color: #dd3173;
+}
+
+.login-bg .login-details .login-form form button:focus {
+  box-shadow: none;
+}
+
+.login-bg .login-details .login-form form button:disabled,
+.login-bg .login-details .login-form form button:focus:disabled,
+.login-bg .login-details .login-form form button:hover:disabled,
+.login-bg .login-details .login-form form button:active:disabled {
+  background: #ea4c89;
+  border-color: #ea4c89;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.login-bg .login-details .login-form form .new-ac {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 2.4rem;
+}
+.login-bg .login-details .login-form form .new-ac a {
+  color: #03c1ff;
+}
+.copyright {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 3.8rem;
+}
+.copyright a {
+  color: #03c1ff;
+}
+
+.type-test {
+  background-image: url(../images/type-text-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.type-test .type-t-details {
+  height: 100vh;
+}
+.type-test .type-test-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+.type-test .type-test-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 7.7rem 0 6rem;
+  color: #fff;
+}
+.type-test .type-test-content .typing-input {
+  display: flex;
+  justify-content: center;
+}
+.type-test .type-test-content .typing-input .typing-input-box {
+  text-align: center;
+  margin: 0 6px;
+}
+.type-test .type-test-content .typing-input .typing-input-box h5 {
+  background-color: #fff;
+  text-align: center;
+  width: 13rem;
+  height: 9.6rem;
+  border-radius: 10px;
+  font-size: 5.5rem;
+  font-weight: 300;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type-test .type-test-content .typing-input .typing-input-box h6 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 1.6rem;
+}
+.type-test
+  .type-test-content
+  .typing-input
+  .typing-input-box
+  input::placeholder {
+  font-size: 5.5rem;
+  font-weight: 300;
+  color: #000;
+}
+.type-test .type-test-content .typing-btn {
+  margin-top: 5.4rem;
+}
+.type-test .type-test-content .typing-btn a {
+  padding: 16px 29px;
+  color: #fff;
+  background-color: #ea4c89;
+  font-size: 2.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.type-test .type-test-content .typing-btn button {
+  padding: 16px 29px;
+  color: #fff;
+  background-color: #ea4c89;
+  font-size: 2.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: none;
+}
+
+.type-test .type-test-content .typing-btn button:hover {
+  background-color: #dd3173;
+}
+.type-test .type-test-content .typing-btn button:focus {
+  box-shadow: none;
+}
+
+.type-test .copyright {
+  position: absolute;
+  bottom: 2rem;
+}
+
+.typing-text {
+  padding-top: 2rem;
+}
+.typing-text .text-box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 3rem 3rem 0 3rem;
+}
+.typing-text .text-box p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  padding-bottom: 3.5rem;
+}
+
+.typing-text .text-box p span {
+  font-size: 17px;
+}
+.typing-text textarea {
+  min-height: 33rem;
+  border: 1px solid #fff;
+  background-color: #ffffff29;
+  border-radius: 10px;
+  padding: 2rem;
+  color: #fff;
+  font-size: 18px;
+}
+.typing-text textarea:focus {
+  background-color: #ffffff29;
+  color: #fff;
+}
+.typing-text textarea::placeholder {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.type-test.type-test2 {
+  height: auto;
+  padding: 40px 0;
+}
+.type-test.type-test2 .type-test-content {
+  height: auto;
+}
+.type-test.type-test2 .copyright {
+  position: unset;
+}
+.type-test.type-test2 .type-t-details {
+  height: auto;
+}
