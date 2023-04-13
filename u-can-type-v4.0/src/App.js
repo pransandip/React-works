@@ -11,6 +11,8 @@ import StartTyping from "./components/home/start-typing/StartTyping";
 import SubmitYourCode from "./components/home/submit-your-score/SubmitYourCode";
 import SignUp from "./components/signup/SignUp";
 import ForgotPassword from "./components/login/forgot-password/ForgotPassword";
+import Admin from "./components/Admin/Admin";
+import AdminLogin from "./components/Admin/AdminLogin";
 
 function App() {
   const localDBInfo = Object.create({});
@@ -31,6 +33,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/admin-dashboard" element={<Admin />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route
           path="/start-typing"
