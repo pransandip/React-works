@@ -1,0 +1,35 @@
+div>button {
+    height: 50px;
+    width: 120px;
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+}
+
+div>#_state {
+    height: 40px;
+    color: rgb(169, 148, 189);
+    width: 40px;
+    margin-top: 70px;
+    display: inline-block;
+}
+
+div>#head_ {
+    color: rgb(169, 148, 189);
+    font-size: 45px;
+    margin-top: 100px;
+}
+
+div>#head_2 {
+    color: rgb(169, 148, 189);
+    font-size: 25px;
+}
+
+#btnSpc {
+    margin-right: 10px;
+}
+
+.count_ {
+    color: blue;
+    font-size: 20px;
+}

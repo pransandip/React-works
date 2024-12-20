@@ -1,0 +1,19 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": ["javascriptreact"],
+  "ignorePaths": [
+    "cspell.json",
+    ".github/workflows/**",
+    ".vscode/*.json",
+    "coverage/",
+    "dist/",
+    "build/",
+    "node_modules/",
+    "yarn.lock",
+    "package.json",
+    "package-lock.json",
+    "pnpm-lock.yaml"
+  ],
+  "words": ["Avenir"]
+}

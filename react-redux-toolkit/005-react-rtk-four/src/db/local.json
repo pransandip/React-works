@@ -1,0 +1,38 @@
+{
+  "accounts": [
+    {
+      "id": "d3794527d4",
+      "amount": 777
+    },
+    {
+      "id": "44b727a2f1",
+      "amount": 100
+    },
+    {
+      "id": "15e9f7a445",
+      "amount": 777
+    },
+    {
+      "id": "2ea840b5c8",
+      "amount": 100
+    },
+    {
+      "id": "d4d7f90947",
+      "amount": 777
+    },
+    {
+      "id": "6ebaba86cb",
+      "amount": 777
+    }
+  ],
+  "bonus": [
+    {
+      "id": 1,
+      "points": 2
+    },
+    {
+      "id": 2,
+      "points": 3
+    }
+  ]
+}

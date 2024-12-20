@@ -1,0 +1,15 @@
+div>button {
+    height: 50px;
+    width: 120px;
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+}
+
+div>#h1State {
+    height: 40px;
+    color: white;
+    width: 40px;
+    margin-top: 250px;
+    display: inline-block;
+}
